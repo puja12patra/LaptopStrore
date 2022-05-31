@@ -1,0 +1,54 @@
+<%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet"  type="text/css" href="/CSS/formStyle.css">   
+    </head>
+    <body>
+         <%-include('../Includes/navigation.ejs')%>
+     <div class="cardDiv">  
+        <form action="/searchProduct" method="POST" class="form-inline my-2 my-lg-0" >
+            <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+           
+            <input class="form-control " style="width: 80%;" type="search" name="searchText" placeholder="Type to search">
+            
+          
+            
+            <br>
+              <button class="btn btn=outline-success my-2 my-sm-0" style="width: 10%;margin-left: 45%;color:beige;border-color: azure;" type="submit">Search</button>
+            </form> 
+          <br>     
+        <%if(data.length>0){%>
+              
+            <div class="container" >
+                <div class="row">
+                    <%for(let x of data){%>
+                     <div class="col-lg-4" >
+                         <div class="card" style="width: 20rem;margin-bottom: 1em;">
+                            <div class="card-body " >
+                            <div class="img" >
+                                <%if(x.p_image){%>
+                                    <img src="<%=x.p_image%>" style="width:100px;">
+                                <%}%>
+
+                            </div>    
+                               
+                                <h4 class="card-title">Product Title: <%=x.p_title%></h4>
+                                <h5 class="card-subtitle mb-2 text-muted">Price: <%=x.p_price%></h5>
+                                <h6 class="card-text">Description: <%=x.p_des%></h6>
+                               
+                                
+                                <a href="/details/<%=x._id%>" class="btn btn-primary" style="margin-left: 40%;">Details</a>
+                    </div>
+                  </div>
+                </div> 
+            <%}%>
+            
+                </div>
+                </div>        
+            <%}else{%>
+            <h1>Data Not Found.</h1>
+        <%}%>
+    </div>
+     <%-include('../Includes/footer.ejs')%>
+
+
+
+   

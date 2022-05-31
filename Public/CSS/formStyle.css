@@ -1,0 +1,170 @@
+.outerDiv
+{
+    background-image:linear-gradient(120deg,#fa90bc ,#171350 );
+    width:100%;
+    height:100vh;
+    padding-top:10vh;
+}
+.innerDiv{
+    background-color: aliceblue;
+    width:40%;
+    height:70vh;
+    margin:auto;
+   padding-top:2vh;
+
+}
+.Reg1Div
+{
+   
+    background-image:linear-gradient(120deg,#44a8d6 ,#751588 );
+    width:100%;
+    height:100vh;
+    padding-top:10vh;
+}
+.Reg2Div
+{
+    background-color: white;
+    width:40%;
+    height:70vh;
+    margin:auto;
+   padding-top:2vh;
+}
+.log1Div
+{
+    /*background-image:linear-gradient(120deg,#408e24 ,#77e7b1 );*/
+    background-color: rgb(136, 222, 136);
+    width:100%;
+    height:100vh;
+    padding-top:10vh;
+}
+.log2Div
+{
+    background-color: #efeff7;
+    width:40%;
+    height:60vh;
+    margin:auto;
+   padding-top:2vh;
+   border-radius: 5vh;
+}
+.editouter
+{
+    background-color: #CACFD2;
+   width:100%;
+    height:100vh;
+    padding-top:10vh;
+}
+.editinner
+{
+    background-color:#fff ;
+    
+    width:40%;
+    height:80vh;
+    margin:auto;
+   padding-top:2vh;
+}
+input{
+    margin-left: 10%;
+    height:7vh;
+    width:80%;
+}
+label{
+    margin-left: 10%;
+}
+button{
+    margin-left: 10%;
+    background-image:linear-gradient(120deg,#44a8d6 ,#751588 );
+    border:none;
+    width:80%;
+    height:7vh;
+    margin-bottom: 10%;
+}
+p{
+    color:white;
+    margin-top: 2%;
+}
+h2
+{
+    color:rgb(37, 66, 163);
+    margin-left:35%;
+}
+.cardDiv
+{
+    background-color: #9FE2BF;
+    width:100%;
+    height:200vh;
+    padding-top:10vh;
+   
+   
+}
+.cardDiv3
+{
+    background-color: #D5F5E3;width:100%; height:170vh;padding-top:10vh;
+}
+h3
+{
+    color:rgb(42, 19, 105);
+   
+}
+
+table
+{
+    background-color: #c3cbd1;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    border-collapse: collapse;
+    width: 90%;
+}
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 4px;
+  }
+
+
+
+.active
+{
+    color: rgb(104, 212, 231) !important;
+   border:white 2px solid;
+    font-family:cursive;
+}
+.errorMsg
+{
+    color:red;
+    margin-left: 10%;
+}
+
+
+
+/*-----for details page----*/
+.card-notify-year {
+    position: absolute;
+   margin-left: 50%;
+    background: #ff4444;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    padding: 15px 0 0 0;
+}
+/*colors of Laptop*/
+.color {
+	width: 350px;
+	margin: 0 auto;
+}
+.color li {
+	margin: 0 15px 0 0;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 100%;
+}
+.color .red    {background: #fa5a5a;}
+
+.color .green  {background: #82c8a0;}
+.color .cyan   {background: #7fccde;}
+.color .blue   {background: #6698cb;}
+.color .purple {background: #cb99c5;}
+

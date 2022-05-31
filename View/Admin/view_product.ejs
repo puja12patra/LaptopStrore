@@ -1,0 +1,58 @@
+<%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet"   href="/CSS/formStyle.css">   
+    </head>
+    <body >
+        <%-include('../Includes/navigation.ejs')%>
+        <div class="cardDiv3"  >  
+        <%if(data.length>0){%>
+           <center>
+                <table border="1" style="width:95%;">
+                <tr>
+                    <th><h3>Title</h3></th> 
+                    <th><h3> Price</h3></th>
+                    <th><h3> Discription</h3></th>
+                    <th><h3 >Image</h3></th>
+                    <th><h3>Action</h3></th>
+                    <th><h3>Delete</h3></th>
+                   
+                </tr> 
+               
+                <%for(let x of data){%>
+                <tr>
+                    
+                    <th><h5><%=x.p_title%></h5></th> 
+                    <th><h5><%=x.p_price%></h5></th>
+                    <th><h5><%=x.p_des%></h5></th>
+                    <th>
+                        <%if(x.p_image){%>
+                            <img src="<%=x.p_image%>" style="width:100px;">
+                        <%}%>
+                    </th>
+                    
+                   <th><h4><a href="/edit/<%=x._id%>" class="btn btn-primary" style="width:40%;">Edit</a></h4></th>
+                   <th><h4><a href="/delete/<%=x._id%>" class="btn btn-primary" style="width:50%;">Delete</a></h4></th>
+                   
+                   <th>
+                    <form action="/delete" method="POST">
+                    <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+                       <input type="hidden" name="product_id" value="<%=x._id%>">
+                       <button type="submit" class="btn btn-delete" style="width:55%;height:10%;" >Delete(Post)</button>
+                   </form>
+                  </th> 
+
+                </tr>
+               
+                <%}%>
+            </table>
+        </center>
+            
+        <%}else{%>
+            <h1>Data Not Found.</h1>
+        <%}%>
+
+    </div>
+        <%-include('../Includes/footer.ejs')%>
+
+
+
+   

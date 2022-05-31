@@ -1,0 +1,38 @@
+    <%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet"  type="text/css" href="/CSS/formStyle.css">   
+    </head>
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+        <div class="outerDiv">
+        
+       
+      
+        <form action="/post_product" method="POST" enctype="multipart/form-data">
+        <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+         
+             <div class="innerDiv" style="height: 500px; ;">
+          <h2>Products</h2>
+         
+
+          
+         <label>Product Title:</label>   
+         <input type="text" name="product_title" placeholder="Enter Product name">
+         <br><br>
+         <label>Product Price:</label> 
+         <input type="text" name="product_price" placeholder="Enter Product price">
+         <br><br>
+         <label>Product Description:</label> 
+         <input type="text" name="product_description" placeholder="Enter Product description">
+          <br><br>
+          <label style="color:blue ;">Image</label>
+          <input type="file" name="p_image" >
+          <br>
+           <div>
+            <button type="submit"><p>Submit</p></button>
+           </div>
+
+          </div>
+        </div>
+        </form>
+
+       <%-include('../Includes/footer.ejs')%>

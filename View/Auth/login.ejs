@@ -1,0 +1,36 @@
+<%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet"  type="text/css" href="/CSS/formStyle.css">   
+    </head>
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+        <div class="log1Div" >
+        <form action="/post_logindetails" method="POST">
+          <input type="hidden" value="<%=csrf_token%>" name="_csrf"> 
+         
+             <div class="log2Div">
+          <h2 style="margin-left:32%;">Login Form</h2>
+         
+         <label>Email Id:</label>   
+         <input type="email" style="border-radius: 3vh; " name="mail" placeholder="Enter Mail Id" value="<% if(cookie_data.cookieData){%> <%=cookie_data.cookieData.mail%> <%}%>">
+         <br><br>
+         <label>Password:</label> 
+         <input type="password" style="border-radius: 3vh;" name="pwd" placeholder="Enter Password">
+         <br><br>
+         <div class="form-group form-check" style="margin-left: 2%;" >
+           <input type="checkbox" class="form-check-input" name="checked" >
+           <label class="form check-label" >Remember me</label>
+         </div>
+         <div>
+           <%if(errorMsg){%>
+            <div class="errorMsg"><%=errorMsg%></div>
+          <%}%>
+         </div>
+           <div>
+            <button type="submit" style="border-radius: 3vh; "><p>Submit</p></button>
+           </div>
+
+          </div>
+        </div>
+        </form>
+
+       <%-include('../Includes/footer.ejs')%>

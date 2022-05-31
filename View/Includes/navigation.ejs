@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-laptop"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link <%= path ==='/' ? 'active' : ' ' %> " aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= path ==='/show_product' ? 'active' : ' ' %>" href="/show_product">View Product(admin)</a>
+          </li>
+          <%if(isAuthenticated){%>
+          <li class="nav-item">
+            <a class="nav-link <%= path ==='/add_product' ? 'active' : ' ' %> " href="/add_product">Add Product</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link  <%= path ==='/user_product' ? 'active' : ' ' %>" href="/user_product">View Product(user)</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link <%= path ==='/log_out' ? 'active' : ' ' %>"  href="/log_out">Log out</a>
+          </li>
+          <%}%>
+          <%if(!isAuthenticated){%>
+            <li class="nav-item">
+              <a class="nav-link <%= path ==='/reg_details' ? 'active' : ' ' %>" href="/reg_details">Registration Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <%= path ==='/log_details' ? 'active' : ' ' %>" href="/log_details">Login Form</a>
+            </li>
+          <%}%> 
+          
+        </ul>
+      </div>
+    </div>
+  </nav>

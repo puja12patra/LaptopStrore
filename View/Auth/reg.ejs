@@ -1,0 +1,38 @@
+<%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet"  type="text/css" href="/CSS/formStyle.css">   
+    </head>
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+        <div class="Reg1Div">
+        <form action="/post_details" method="POST">
+          <input type="hidden" value="<%=csrf_token%>" name="_csrf">  
+        
+             <div class="Reg2Div">
+          <h2 style="margin-left:25%;">Registration Form</h2>
+         
+         <label>First Name:</label>   
+         <input type="text" name="f_name" placeholder="Enter First name">
+         <br>
+         <label>Last Name:</label> 
+         <input type="text" name="l_name" placeholder="Enter Last Name">
+         <br>
+         <label>Email Id:</label> 
+         <input type="email" name="mail" placeholder="Enter Email Id">
+          <br>
+          <label>Password:</label> 
+         <input type="password" name="pwd" placeholder="Enter Password">
+         <br><br>
+         <div>
+          <%if(errorMsg){%>
+           <div class="errorMsg"><%=errorMsg%></div>
+         <%}%>
+          </div>
+           <div>
+            <button type="submit" ><p>Submit</p></button>
+           </div>
+
+          </div>
+        </div>
+        </form>
+
+       <%-include('../Includes/footer.ejs')%>
