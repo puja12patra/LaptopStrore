@@ -70,7 +70,7 @@ const fileFilter=(req,file,callback)=>
 }
 //use the multer
 appServer.use(multer({storage:fileStorage,
-    fileFilter:fileFilter,limits:{fieldsize:1024*1024*5}}).single('p_image'));//image is name attribute
+    fileFilter:fileFilter,limits:{fieldsize:1024*1024*5}}).single('p_image'));//p_image is name attribute
 
     appServer.use(session({secret:'secret-key',resave:false,saveUninitialized:false,store:storeValue}))
 
